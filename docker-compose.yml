@@ -23,6 +23,7 @@ x-airflow-common: &airflow-common
     - ./pipelines:/opt/airflow/pipelines
     - ./configs:/opt/airflow/configs
     - ./scripts:/opt/airflow/scripts
+    - ./sql:/opt/airflow/sql:ro
     - ./jars:/opt/airflow/jars:ro
     - ./logs/airflow:/opt/airflow/logs
     - /var/run/docker.sock:/var/run/docker.sock

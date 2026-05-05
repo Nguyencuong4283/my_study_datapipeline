@@ -49,6 +49,7 @@ with DAG(
     catchup=False,
     default_args=DEFAULT_ARGS,
     max_active_runs=1,
+    max_active_tasks=1,
     tags=["hudi", "lakehouse", "spark", "trino"],
 ) as dag:
     start = EmptyOperator(task_id="start")

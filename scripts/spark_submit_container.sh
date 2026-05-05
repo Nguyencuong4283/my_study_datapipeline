@@ -47,7 +47,9 @@ fi
 submit_args=(
   /opt/spark/bin/spark-submit
   --master
-  local[2]
+  "local[*]"
+  --driver-memory
+  2g
 )
 
 if [[ ${#host_jars[@]} -gt 0 ]]; then
